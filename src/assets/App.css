@@ -1,0 +1,177 @@
+/* .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.avatar{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.divider {
+  height: 2px;
+  background: #c84f92;
+  margin: 15px 0 25px;
+  border-radius: 10px;
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-btn{
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: black;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.dashboard {
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+  background: white;
+   border-radius: 30px 30px 0 0;
+}
+
+.category-section,
+.progress-section,
+.task-header {
+  width: 100%;
+} */
+
+/* =========================
+   DASHBOARD CONTAINER
+========================= */
+
+.dashboard {
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+  background: white;
+  border-radius: 30px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* =========================
+   DIVIDER
+========================= */
+
+.divider {
+  height: 2px;
+  background: #c84f92;
+  margin: 15px 0 25px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+/* =========================
+   TASK HEADER
+========================= */
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.task-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* =========================
+   ADD BUTTON
+========================= */
+
+.add-btn {
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  background: black;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.add-btn:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.category-section,
+.progress-section {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media screen and (max-width: 430px) {
+
+  .dashboard {
+    max-width: 100%;
+    min-height: 100vh;
+    padding: 16px;
+    border-radius: 20px;
+  }
+
+  .avatar {
+    width: 52px;
+    height: 52px;
+  }
+
+  .task-header h2 {
+    font-size: 22px;
+  }
+
+  .add-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 22px;
+  }
+}

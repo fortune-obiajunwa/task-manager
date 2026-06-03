@@ -1,0 +1,169 @@
+.category-section {
+  width: 100%;
+  margin-top: 15px;
+}
+
+/* ---------- TABS ---------- */
+
+.tabs {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 22px;
+  overflow-x: auto;
+}
+
+.tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.tab {
+  background: none;
+  border: none;
+  color: #b1b1b1;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+  transition: .3s;
+}
+
+.tab:hover {
+  color: #7c4dff;
+}
+
+.tab.active {
+  color: #7c4dff;
+}
+
+.tab.active::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #7c4dff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -12px;
+}
+
+/* ---------- CAROUSEL ---------- */
+
+.carousel {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 14px;
+  width: max-content;
+  animation: slideCards 18s linear infinite;
+}
+
+.carousel:hover .carousel-track {
+  animation-play-state: paused;
+}
+
+@keyframes slideCards {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-35%);
+  }
+}
+
+/* ---------- CARD ---------- */
+
+.task-card {
+  width: 135px;
+  height: 155px;
+  border-radius: 28px;
+  padding: 18px;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.task-card:hover {
+  transform: translateY(-6px);
+}
+
+.active-card {
+  transform: scale(1.04);
+}
+
+.development {
+  background: #ffca28;
+}
+
+.design {
+  background: #42a5f5;
+}
+
+.research {
+  background: #ff4fa3;
+}
+
+/* ---------- CONTENT ---------- */
+
+.task-number {
+  color: white;
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.task-label {
+  color: white;
+  font-size: 15px;
+  margin-top: 4px;
+}
+
+.task-pill {
+  margin-top: 28px;
+  background: white;
+  color: #222;
+  padding: 8px 12px;
+  border-radius: 20px;
+  width: fit-content;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ---------- PRODUCTIVE DAY ---------- */
+
+.productive-day {
+  margin-top: 35px;
+}
+
+.productive-day h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.productive-day p {
+  color: #8a8a8a;
+  font-size: 14px;
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 480px) {
+
+  .task-card {
+    width: 130px;
+    height: 150px;
+  }
+
+  .task-number {
+    font-size: 38px;
+  }
+
+  .tabs {
+    gap: 14px;
+  }
+}
